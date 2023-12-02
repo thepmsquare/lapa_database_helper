@@ -9,9 +9,7 @@ setup(
     package_data={
         package_name: ["data/*"],
     },
-    install_requires=[
-        "requests>=2.31.0"
-    ],
+    install_requires=["requests>=2.31.0"],
     author="thePmSquare",
     author_email="thepmsquare@gmail.com",
     description="helper to access the database layer for my personal server.",
