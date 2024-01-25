@@ -1,4 +1,4 @@
-# square_database_helper
+# lapa_database_helper
 
 ## about
 
@@ -6,7 +6,7 @@ helper to access the database layer for my personal server.
 
 ## installation
 
-> pip install square_database_helper
+> pip install lapa_database_helper
 
 ## usage
 
@@ -14,7 +14,7 @@ helper to access the database layer for my personal server.
 
 ## configs
 
-1. square_database_helper\data\config.ini
+1. lapa_database_helper\data\config.ini
 
 ## env
 

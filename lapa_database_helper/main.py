@@ -1,25 +1,25 @@
 import requests
 
-from square_database_helper.configuration import (
-    config_str_square_database_ip,
-    config_str_square_database_protocol,
-    config_int_square_database_port,
+from lapa_database_helper.configuration import (
+    config_str_lapa_database_ip,
+    config_str_lapa_database_protocol,
+    config_int_lapa_database_port,
 )
 
 
-class SquareDatabaseHelper:
+class LAPADatabaseHelper:
     def __init__(self):
         try:
-            self.global_str_square_database_url_base = (
-                f"{config_str_square_database_protocol}://"
-                f"{config_str_square_database_ip}:{config_int_square_database_port}"
+            self.global_str_lapa_database_url_base = (
+                f"{config_str_lapa_database_protocol}://"
+                f"{config_str_lapa_database_ip}:{config_int_lapa_database_port}"
             )
         except Exception:
             raise
 
     def _make_request(self, method, endpoint, data=None):
         try:
-            url = f"{self.global_str_square_database_url_base}/{endpoint}"
+            url = f"{self.global_str_lapa_database_url_base}/{endpoint}"
             response = requests.request(method, url, json=data)
             response.raise_for_status()
             return response.json()
