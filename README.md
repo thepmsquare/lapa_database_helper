@@ -22,6 +22,10 @@ helper to access the database layer for my personal server.
 
 ## changelog
 
+### v0.0.2
+
+- rename to lapa.
+
 ### v0.0.1
 
 - initial implementation.
