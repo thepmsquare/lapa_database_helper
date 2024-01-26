@@ -22,6 +22,10 @@ helper to access the database layer for my personal server.
 
 ## changelog
 
+### v0.0.3
+
+- add extra parameters for ignore_filter_and_x_all.
+
 ### v0.0.2
 
 - rename to lapa.
