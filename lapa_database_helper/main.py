@@ -1,9 +1,9 @@
 import requests
 
 from lapa_database_helper.configuration import (
+    config_int_lapa_database_port,
     config_str_lapa_database_ip,
     config_str_lapa_database_protocol,
-    config_int_lapa_database_port,
 )
 
 
@@ -42,7 +42,12 @@ class LAPADatabaseHelper:
             raise
 
     def get_rows(
-        self, filters: dict, database_name: str, schema_name: str, table_name: str
+        self,
+        filters: dict,
+        database_name: str,
+        schema_name: str,
+        table_name: str,
+        ignore_filters_and_get_all: bool = True,
     ):
         try:
             endpoint = "get_rows"
@@ -51,6 +56,7 @@ class LAPADatabaseHelper:
                 "database_name": database_name,
                 "schema_name": schema_name,
                 "table_name": table_name,
+                "ignore_filters_and_get_all": ignore_filters_and_get_all,
             }
             return self._make_request("POST", endpoint, payload)
         except Exception:
@@ -63,6 +69,7 @@ class LAPADatabaseHelper:
         database_name: str,
         schema_name: str,
         table_name: str,
+        ignore_filters_and_edit_all: bool = False,
     ):
         try:
             endpoint = "edit_rows"
@@ -72,13 +79,19 @@ class LAPADatabaseHelper:
                 "database_name": database_name,
                 "schema_name": schema_name,
                 "table_name": table_name,
+                "ignore_filters_and_edit_all": ignore_filters_and_edit_all,
             }
             return self._make_request("PUT", endpoint, payload)
         except Exception:
             raise
 
     def delete_rows(
-        self, filters: dict, database_name: str, schema_name: str, table_name: str
+        self,
+        filters: dict,
+        database_name: str,
+        schema_name: str,
+        table_name: str,
+        ignore_filters_and_delete_all: bool = False,
     ):
         try:
             endpoint = "delete_rows"
@@ -87,6 +100,7 @@ class LAPADatabaseHelper:
                 "database_name": database_name,
                 "schema_name": schema_name,
                 "table_name": table_name,
+                "ignore_filters_and_delete_all": ignore_filters_and_delete_all,
             }
             return self._make_request("DELETE", endpoint, payload)
         except Exception:
