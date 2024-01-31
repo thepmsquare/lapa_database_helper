@@ -22,6 +22,10 @@ helper to access the database layer for my personal server.
 
 ## changelog
 
+### v0.0.4
+
+- change default value of ignore_filters_and_get_all to False.
+
 ### v0.0.3
 
 - add extra parameters for ignore_filter_and_x_all.
