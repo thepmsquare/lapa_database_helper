@@ -47,7 +47,7 @@ class LAPADatabaseHelper:
         database_name: str,
         schema_name: str,
         table_name: str,
-        ignore_filters_and_get_all: bool = True,
+        ignore_filters_and_get_all: bool = False,
     ):
         try:
             endpoint = "get_rows"
