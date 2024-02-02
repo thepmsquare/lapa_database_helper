@@ -22,6 +22,10 @@ helper to access the database layer for my personal server.
 
 ## changelog
 
+### v0.0.5
+
+- Configuration is now being read with the help of lapa_commons.
+
 ### v0.0.4
 
 - change default value of ignore_filters_and_get_all to False.

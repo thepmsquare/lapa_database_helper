@@ -4,12 +4,15 @@ package_name = "lapa_database_helper"
 
 setup(
     name=package_name,
-    version="0.0.4",
+    version="0.0.5",
     packages=find_packages(),
     package_data={
         package_name: ["data/*"],
     },
-    install_requires=["requests>=2.31.0"],
+    install_requires=[
+        "requests>=2.31.0",
+        "lapa_commons>=0.0.1"
+    ],
     author="thePmSquare",
     author_email="thepmsquare@gmail.com",
     description="helper to access the database layer for my personal server.",
