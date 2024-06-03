@@ -1,18 +1,17 @@
 import requests
 
-from lapa_database_helper.configuration import (
-    config_int_lapa_database_port,
-    config_str_lapa_database_ip,
-    config_str_lapa_database_protocol,
-)
-
 
 class LAPADatabaseHelper:
-    def __init__(self):
+    def __init__(
+        self,
+        param_int_lapa_database_port: str = 10010,
+        param_str_lapa_database_ip: str = "localhost",
+        param_str_lapa_database_protocol: int = "http",
+    ):
         try:
             self.global_str_lapa_database_url_base = (
-                f"{config_str_lapa_database_protocol}://"
-                f"{config_str_lapa_database_ip}:{config_int_lapa_database_port}"
+                f"{param_str_lapa_database_protocol}://"
+                f"{param_str_lapa_database_ip}:{param_int_lapa_database_port}"
             )
         except Exception:
             raise
