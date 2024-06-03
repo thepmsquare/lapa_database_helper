@@ -12,15 +12,15 @@ helper to access the database layer for my personal server.
 
 [reference python file](./example.py)
 
-## configs
-
-1. lapa_database_helper\data\config.ini
-
 ## env
 
 - python>=3.12.0
 
 ## changelog
+
+### v0.0.6
+
+- remove config file and reconfigure variables as class parameters.
 
 ### v0.0.5
 
