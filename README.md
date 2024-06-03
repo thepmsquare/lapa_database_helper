@@ -21,6 +21,7 @@ helper to access the database layer for my personal server.
 ### v0.0.6
 
 - remove config file and reconfigure variables as class parameters.
+- import class to init file
 
 ### v0.0.5
 
