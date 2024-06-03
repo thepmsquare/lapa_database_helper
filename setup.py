@@ -6,7 +6,7 @@ setup(
     name=package_name,
     version="0.0.6",
     packages=find_packages(),
-    install_requires=["requests>=2.31.0", "lapa_commons>=0.0.1"],
+    install_requires=["requests>=2.31.0"],
     author="thePmSquare",
     author_email="thepmsquare@gmail.com",
     description="helper to access the database layer for my personal server.",
