@@ -4,7 +4,7 @@ package_name = "lapa_database_helper"
 
 setup(
     name=package_name,
-    version="0.0.6",
+    version="0.0.7",
     packages=find_packages(),
     install_requires=["requests>=2.31.0"],
     author="thePmSquare",
