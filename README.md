@@ -18,6 +18,10 @@ helper to access the database layer for my personal server.
 
 ## changelog
 
+### v0.0.7
+
+- update example.py
+
 ### v0.0.6
 
 - remove config file and reconfigure variables as class parameters.
